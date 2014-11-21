@@ -1,0 +1,4 @@
+.btn-reorder { background: #95b753; color: #fff; }
+.btn-reorder:hover { background: #89AB45; }
+.html5sortable tbody tr td { cursor: move; }
+.html5sortable tbody tr.disabled td { cursor: pointer; }

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Example
+
+# Model Form Field configuration
+form: $/bedard/dragdrop/models/example/fields.yaml
+
+# Model Class name
+modelClass: Bedard\DragDrop\Models\Example
+
+# Default redirect location
+defaultRedirect: bedard/dragdrop/examples
+
+# Create page
+create:
+    title: Create Examples
+    redirect: bedard/dragdrop/examples/update/:id
+    redirectClose: bedard/dragdrop/examples
+
+# Update page
+update:
+    title: Edit Examples
+    redirect: bedard/dragdrop/examples
+    redirectClose: bedard/dragdrop/examples
+
+# Preview page
+preview:
+    title: Preview Examples

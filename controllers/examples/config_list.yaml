@@ -1,0 +1,41 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/bedard/dragdrop/models/example/columns.yaml
+
+# Model Class name
+modelClass: Bedard\DragDrop\Models\Example
+
+# List Title
+title: Manage Examples
+
+# Link URL for each record
+recordUrl: bedard/dragdrop/examples/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 0
+
+# Displays the list column set up button
+showSetup: false
+
+# Displays the sorting link on each column
+showSorting: false
+
+# Default sorting column
+defaultSort:
+    column: active
+    direction: desc
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

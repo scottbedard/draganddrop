@@ -1,0 +1,15 @@
+<div data-control="toolbar">
+    <a href="<?= Backend::url('bedard/dragdrop/examples/create') ?>" class="btn btn-primary oc-icon-plus">New Example</a>
+    <button
+        id="updatePosition"
+        class="btn btn-reorder oc-icon-list-ol"
+        disabled="disabled"
+        onclick="$(this).data('request-data', {
+            checked: $('.index_reposition').map(function(){  return $(this).val() }).get()
+        })"
+        data-request-success="initializeSorting();"
+        data-request="onUpdatePosition"
+        data-stripe-load-indicator>
+        Update Order
+    </button>
+</div>

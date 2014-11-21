@@ -1,0 +1,8 @@
+<?php
+// If the row is disabled, make sure we don't allow it to be sorted
+if (!$record->active)
+	echo '<span class="disabled"></span>';
+
+// If the row isn't disabled, add the hidden sort element
+else
+	echo '<input type="hidden" class="index_reposition" value="'.$record->id.'" /> '.$record->position;

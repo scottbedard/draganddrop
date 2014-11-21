@@ -1,0 +1,13 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+  active:
+    label: Position
+    type: partial
+    path: @/plugins/bedard/dragdrop/models/example/_active.htm
+
+  label:
+    label: Label
