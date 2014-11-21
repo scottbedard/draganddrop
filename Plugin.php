@@ -21,7 +21,7 @@ class Plugin extends PluginBase
             'name'        => 'DragDrop',
             'description' => 'No description provided yet...',
             'author'      => 'Bedard',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-arrows'
         ];
     }
 
@@ -34,7 +34,7 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'shop' => [
+            'dragdrop' => [
                 'label'         => 'Drag and Drop',
                 'url'           => Backend::url('bedard/dragdrop/examples'),
                 'icon'          => 'icon-arrows',
