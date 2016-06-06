@@ -11,29 +11,29 @@ function initializeSorting() {
 
 	// Add a sortable class to our table so our css can easily distinguish
 	// sortable / non-sortable lists.
-	$('#Lists').addClass('html5sortable');
+	$('.list-widget').addClass('html5sortable');
 
 	// Add a "disabled" class to rows that should not be sorted
-	$('#Lists tr:has(.disabled)').addClass('disabled');
+	$('.list-widget tr:has(.disabled)').addClass('disabled');
 
 	// Initialize HTML5Sortable on our tbody
-	$('#Lists tbody').html5sortable({
+	$('.list-widget tbody').html5sortable({
 		forcePlaceholderSize: true,
 		items: ':not(.disabled)'
 	});
 
 	// Callback function for when sorting is completed
-	$('#Lists tbody').sortable().bind('sortupdate', function() {
+	$('.list-widget tbody').sortable().bind('sortupdate', function(e) {
 
 		// Trigger the update button
-		$('#updatePosition').prop("disabled", false);
+		$(e.target).parents('div.layout-row').find('button.btn-reorder').prop('disabled',false);
 
 		// Remove the "display: block" that gets added to our rows
-		$('#Lists tbody tr').css('display', '');
+		$('.list-widget tbody tbody tr').css('display', '');
 
 	});
 }
 
 $(function() {
 	initializeSorting();
-});
+}); 
